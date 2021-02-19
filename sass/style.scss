@@ -1,0 +1,46 @@
+$marginOut:margin .25s ease-in-out;
+
+#wrapper {
+    overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+    margin-left: -15rem;
+    min-height: 100vh;
+    transition: $marginOut;
+    -moz-transition: $marginOut;
+    -o-transition: $marginOut;
+    -webkit-transition: $marginOut;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    font-size: 1.2rem;
+    padding: 0.875rem 1.25rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
