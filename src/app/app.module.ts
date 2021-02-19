@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
+// Servicios
+import { ProductosService } from './services/productos.service';
+
+// Componentes
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -15,6 +19,7 @@ import { AddProductosComponent } from './pages/add-productos/add-productos.compo
 import { FinanzasComponent } from './pages/finanzas/finanzas.component';
 import { EditComponent } from './pages/productos/edit/edit.component';
 
+// Rutas
 const routes: Routes = [
   { path: '', component:InicioComponent },
   { path: 'productos', component:ProductosComponent },
@@ -43,7 +48,9 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [
+    ProductosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
