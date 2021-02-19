@@ -13,6 +13,7 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { E404Component } from './errors/e404/e404.component';
 import { AddProductosComponent } from './pages/add-productos/add-productos.component';
 import { FinanzasComponent } from './pages/finanzas/finanzas.component';
+import { EditComponent } from './pages/productos/edit/edit.component';
 
 const routes: Routes = [
   { path: '', component:InicioComponent },
@@ -34,7 +35,8 @@ const routes: Routes = [
     ProductosComponent,
     E404Component,
     AddProductosComponent,
-    FinanzasComponent
+    FinanzasComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
