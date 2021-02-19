@@ -12,6 +12,10 @@ export class ProductosComponent implements OnInit {
     this.listProductos=_productosServicio.regresarDatos();
   }
 
+  public editarProducto(id:number){
+    console.log(id);
+  }
+
   ngOnInit(): void {
   }
 

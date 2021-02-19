@@ -19,7 +19,7 @@
                 <td>{{ lista.descripcion }}</td>
                 <td>{{ lista.cantidad }}</td>
                 <td>
-                    <button data-toggle="modal" data-target="#exampleModal" type="button" class="actions btn btn-warning"><i class="fas fa-edit"></i></button>
+                    <button (click)="editarProducto( i )" data-toggle="modal" data-target="#exampleModal" type="button" class="actions btn btn-warning"><i class="fas fa-edit"></i></button>
                     <a type="button" class="actions btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
