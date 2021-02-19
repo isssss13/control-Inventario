@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +9,15 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { E404Component } from './errors/e404/e404.component';
+
+const routes: Routes = [
+  { path: '', component:InicioComponent },
+  { path: 'productos', component:ProductosComponent },
+  { path: '404', component:E404Component },
+  { path: '**', redirectTo: '/404', pathMatch:'full' },
+];
 
 @NgModule({
   declarations: [
@@ -16,11 +26,14 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     MenuComponent,
     FooterComponent,
     SidebarComponent,
-    InicioComponent
+    InicioComponent,
+    ProductosComponent,
+    E404Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]

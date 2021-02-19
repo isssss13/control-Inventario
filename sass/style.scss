@@ -1,4 +1,4 @@
-$marginOut:margin .25s ease-in-out;
+$trancision:margin .25s ease-in-out;
 
 #wrapper {
     overflow-x: hidden;
@@ -7,10 +7,10 @@ $marginOut:margin .25s ease-in-out;
 #sidebar-wrapper {
     margin-left: -15rem;
     min-height: 100vh;
-    transition: $marginOut;
-    -moz-transition: $marginOut;
-    -o-transition: $marginOut;
-    -webkit-transition: $marginOut;
+    transition: $trancision;
+    -moz-transition: $trancision;
+    -o-transition: $trancision;
+    -webkit-transition: $trancision;
 }
 
 #sidebar-wrapper .sidebar-heading {
