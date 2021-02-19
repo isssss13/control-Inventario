@@ -1,9 +1,12 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading">Start Bootstrap </div>
     <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Inicio</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Productos</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Agregar Productos</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+        <ul>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/" class="list-group-item list-group-item-action bg-light">Inicio</a></li>
+            <li routerLinkActive="active"><a routerLink="/productos" class="list-group-item list-group-item-action bg-light">Productos</a></li>
+            <li routerLinkActive="active"><a routerLink="/add-Producto" class="list-group-item list-group-item-action bg-light">Agregar Productos</a></li>
+            <li routerLinkActive="active"><a routerLink="/status" class="list-group-item list-group-item-action bg-light">Status</a></li>
+        </ul>
+        
     </div>
 </div>

@@ -1,0 +1,9 @@
+div.bg-light div.list-group ul{
+    list-style: none;
+    padding: 0;
+}
+
+div.bg-light div.list-group ul li.active a{
+    background-color: #9c27b0!important;
+    color:#fff;
+}
