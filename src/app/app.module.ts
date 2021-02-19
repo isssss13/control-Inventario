@@ -11,10 +11,12 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { E404Component } from './errors/e404/e404.component';
+import { AddProductosComponent } from './pages/add-productos/add-productos.component';
 
 const routes: Routes = [
   { path: '', component:InicioComponent },
   { path: 'productos', component:ProductosComponent },
+  { path: 'add-Productos', component:AddProductosComponent },
   { path: '404', component:E404Component },
   { path: '**', redirectTo: '/404', pathMatch:'full' },
 ];
@@ -28,7 +30,8 @@ const routes: Routes = [
     SidebarComponent,
     InicioComponent,
     ProductosComponent,
-    E404Component
+    E404Component,
+    AddProductosComponent
   ],
   imports: [
     BrowserModule,
