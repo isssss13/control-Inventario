@@ -1,34 +1,34 @@
 <h1 class="mt-4">Agregar Productos</h1>
-<form action="">
+<form (ngSubmit)="agregar()">
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="id">ID</label>
-                <input type="text" class="form-control" id="id" placeholder="ID">
+                <label for="id">Identificador</label>
+                <input [(ngModel)]="producto.identificador" type="text" name="identificador" class="form-control" id="id" placeholder="identificador">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                <input [(ngModel)]="producto.nombre" name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="precio">Precio</label>
-                <input type="number" class="form-control" id="costo" placeholder="Costo">
+                <input [(ngModel)]="producto.costo" name="costo" type="number" class="form-control" id="costo" placeholder="Costo">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="cantidad">Cantidad</label>
-                <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
+                <input [(ngModel)]="producto.cantidad" name="cantidad" type="number" class="form-control" id="cantidad" placeholder="Cantidad">
             </div>
         </div>
         <div class="col-md-12">
             <div class="form-group">
                 <label for="descripcion">Descripcion</label>
-                <textarea name="descripcion" id="descripcion" class="form-control" cols="30" rows="10"></textarea>
+                <textarea [(ngModel)]="producto.descripcion" name="descripcion" id="descripcion" class="form-control" cols="30" rows="10"></textarea>
             </div>
         </div>
         <div class="col-md-12">

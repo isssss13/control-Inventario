@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
+
+// AngularFire
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 // Servicios
 import { ProductosService } from './services/productos.service';
@@ -48,12 +51,13 @@ const routes: Routes = [
     EditComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AppRoutingModule,
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [
     ProductosService

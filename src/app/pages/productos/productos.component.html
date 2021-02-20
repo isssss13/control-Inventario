@@ -13,13 +13,13 @@
         </thead>
         <tbody>
             <tr *ngFor="let lista of listProductos">
-                <td>{{ lista.id }}</td>
+                <td>{{ lista.identificador }}</td>
                 <td>{{ lista.nombre }}</td>
                 <td>{{ lista.costo }}</td>
                 <td>{{ lista.descripcion }}</td>
                 <td>{{ lista.cantidad }}</td>
                 <td>
-                    <button (click)="editarProducto(  lista.id  )" data-toggle="modal" data-target="#exampleModal" type="button" class="actions btn btn-warning"><i class="fas fa-edit"></i></button>
+                    <button (click)="editarProducto(lista.id)" data-toggle="modal" data-target="#exampleModal" type="button" class="actions btn btn-warning"><i class="fas fa-edit"></i></button>
                     <a type="button" class="actions btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
