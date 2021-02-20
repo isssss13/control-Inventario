@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "controlinventarios-598cb": {
+      "hosting": {
+        "controlInventario": [
+          "controlinventarios-598cb"
+        ]
+      }
+    }
+  }
+}
