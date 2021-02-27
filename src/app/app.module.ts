@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http';
+
 // AngularFire
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFireModule } from '@angular/fire';
@@ -58,6 +60,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
   ],
   providers: [
     ProductosService
