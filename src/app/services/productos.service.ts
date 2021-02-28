@@ -11,12 +11,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductosService {
-  url="http://localhost/angular/controlInventario/server/controllers/";
+  // url=`${window.location.origin}/include/controllers/`;
+  url = "http://localhost/angular/controlInventario/src/includes/controllers/";
 
   
   // private productosCollection: AngularFirestoreCollection<Item>;
   // listProductos: Observable<Item[]>;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    console.log(window.location.origin);
+  }
   //   this.productosCollection = afs.collection<Item>('productos');
   //   this.listProductos = this.productosCollection.snapshotChanges().pipe(
   //     map(actions => actions.map(a => {
